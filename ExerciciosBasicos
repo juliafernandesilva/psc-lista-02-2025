@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class ExerciciosBasicos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // EXERCÍCIO 1
+        System.out.println("=== EXERCÍCIO 1 ===");
+        System.out.print("Digite um número: ");
+        int numero = sc.nextInt();
+        System.out.println("O número informado foi " + numero);
+        System.out.println();
+        
+        // EXERCÍCIO 2
+        System.out.println("=== EXERCÍCIO 2 ===");
+        System.out.print("Digite o primeiro número: ");
+        double num1 = sc.nextDouble();
+        System.out.print("Digite o segundo número: ");
+        double num2 = sc.nextDouble();
+        
+        double soma = num1 + num2;
+        double subtracao = num1 - num2;
+        double multiplicacao = num1 * num2;
+        
+        System.out.println("Soma: " + soma);
+        System.out.println("Subtração: " + subtracao);
+        System.out.println("Multiplicação: " + multiplicacao);
+        System.out.println();
+        
+        // EXERCÍCIO 3
+        System.out.println("=== EXERCÍCIO 3 ===");
+        System.out.print("Digite a nota do 1º bimestre: ");
+        double nota1 = sc.nextDouble();
+        System.out.print("Digite a nota do 2º bimestre: ");
+        double nota2 = sc.nextDouble();
+        System.out.print("Digite a nota do 3º bimestre: ");
+        double nota3 = sc.nextDouble();
+        System.out.print("Digite a nota do 4º bimestre: ");
+        double nota4 = sc.nextDouble();
+        
+        double media = (nota1 + nota2 + nota3 + nota4) / 4;
+        System.out.println("Média: " + media);
+        System.out.println();
+        
+        // EXERCÍCIO 4
+        System.out.println("=== EXERCÍCIO 4 ===");
+        System.out.print("Digite o preço do litro da gasolina: R$ ");
+        double precoLitro = sc.nextDouble();
+        System.out.print("Digite quantos litros foram vendidos: ");
+        double litros = sc.nextDouble();
+        
+        double valorPagar = precoLitro * litros;
+        System.out.println("O cliente deverá pagar: R$ " + valorPagar);
+        System.out.println();
+        
+        // EXERCÍCIO 5
+        System.out.println("=== EXERCÍCIO 5 - EUROTRIP ===");
+        
+        System.out.print("Preço da viagem para Alemanha: R$ ");
+        double precoAlemanha = sc.nextDouble();
+        System.out.print("Quantidade de pessoas para Alemanha: ");
+        int pessoasAlemanha = sc.nextInt();
+        
+        System.out.print("Preço da viagem para Portugal: R$ ");
+        double precoPortugal = sc.nextDouble();
+        System.out.print("Quantidade de pessoas para Portugal: ");
+        int pessoasPortugal = sc.nextInt();
+        
+        System.out.print("Preço da viagem para Itália: R$ ");
+        double precoItalia = sc.nextDouble();
+        System.out.print("Quantidade de pessoas para Itália: ");
+        int pessoasItalia = sc.nextInt();
+        
+        double totalAlemanha = precoAlemanha * pessoasAlemanha;
+        double totalPortugal = precoPortugal * pessoasPortugal;
+        double totalItalia = precoItalia * pessoasItalia;
+        
+        double valorTotal = totalAlemanha + totalPortugal + totalItalia;
+        int totalPessoas = pessoasAlemanha + pessoasPortugal + pessoasItalia;
+        
+        System.out.println("\n--- RESULTADO DA EUROTRIP ---");
+        System.out.println("Total de pessoas: " + totalPessoas);
+        System.out.println("Valor total da viagem: R$ " + valorTotal);
+        
+        sc.close();
+    }
+}
